@@ -1,265 +1,746 @@
+/* =========================
+   GOOGLE FONTS
+   ========================= */
 
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap');
 
-* { box-sizing: border-box; }
 
-html { scroll-behavior: smooth; }
+/* =========================
+   GENERAL
+   ========================= */
+
+* {
+    box-sizing: border-box;
+}
 
 body {
     margin: 0;
-    font-family: 'Inter', sans-serif;
-    background: #f7f3ee;
-    color: #29242a;
+    padding: 0;
+
+    background: #f7f2ea;
+    color: #2d2433;
+
+    font-family: 'Inter', Arial, sans-serif;
+    font-size: 16px;
     line-height: 1.6;
 }
 
+h1,
+h2,
+h3 {
+    font-family: 'Playfair Display', Georgia, serif;
+    color: #39243f;
+}
+
+h1 {
+    font-size: 42px;
+    margin: 0 0 10px;
+}
+
+h2 {
+    font-size: 30px;
+    margin-top: 0;
+}
+
+h3 {
+    font-size: 22px;
+}
+
+p {
+    margin: 10px 0;
+}
+
+a {
+    color: #70456f;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #a06c96;
+    text-decoration: underline;
+}
+
+
+/* =========================
+   HEADER
+   ========================= */
+
 header {
-    background: #241c29;
-    color: #fff;
-    padding: 24px 5%;
+    background: #39243f;
+    color: #ffffff;
+
     text-align: center;
+
+    padding: 35px 20px;
+
+    border-bottom: 5px solid #b8955a;
 }
 
 header h1 {
-    margin: 0 0 6px;
-    font-family: 'Playfair Display', serif;
-    font-size: 2.4rem;
+    color: #ffffff;
 }
 
-header p { margin: 0; color: #d9cfe0; }
+header p {
+    margin: 0;
+    color: #eadfea;
+}
+
+
+/* =========================
+   NAVIGATION
+   ========================= */
 
 .navbar {
-    background: #382b40;
-    padding: 12px 5%;
+    background: #ffffff;
+
     text-align: center;
-    border-bottom: 3px solid #d9a441;
+
+    padding: 15px;
+
+    border-bottom: 1px solid #d8c9b8;
+
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
 }
 
 .navbar a {
-    color: #fff;
-    text-decoration: none;
     display: inline-block;
-    padding: 9px 14px;
-    margin: 3px;
-    border-radius: 7px;
-    transition: .2s;
+
+    margin: 0 12px;
+    padding: 8px 12px;
+
+    color: #39243f;
+
+    font-weight: 600;
+
+    border-radius: 8px;
 }
 
-.navbar a:hover { background: #d9a441; color: #241c29; }
+.navbar a:hover {
+    background: #39243f;
+    color: #ffffff;
+
+    text-decoration: none;
+}
+
+
+/* =========================
+   MAIN CONTAINER
+   ========================= */
 
 .container {
+    width: 90%;
     max-width: 1100px;
-    margin: 0 auto;
-    padding: 36px 22px;
+
+    margin: 35px auto;
 }
 
-h2, h3 {
-    font-family: 'Playfair Display', serif;
-    color: #382b40;
-}
 
-h2 { font-size: 2rem; }
-h3 { font-size: 1.35rem; }
-
-.card {
-    background: #fff;
-    border: 1px solid #ded5cf;
-    border-radius: 14px;
-    padding: 22px;
-    margin: 18px 0;
-    box-shadow: 0 7px 20px rgba(40, 30, 40, .07);
-}
-
-.btn {
-    display: inline-block;
-    background: #d9a441;
-    color: #241c29;
-    padding: 10px 17px;
-    border-radius: 8px;
-    text-decoration: none;
-    font-weight: 700;
-    transition: .2s;
-}
-
-.btn:hover { background: #b98220; transform: translateY(-1px); }
+/* =========================
+   HERO
+   ========================= */
 
 .hero {
-    background: linear-gradient(135deg, #eee5f2, #fff9ee);
-    border: 1px solid #ded5cf;
-    border-radius: 18px;
-    padding: 42px 28px;
-    margin-bottom: 28px;
-}
+    background: #ffffff;
 
-.hero h2 { margin-top: 0; font-size: 2.5rem; }
+    padding: 30px;
 
-.profile-card {
-    max-width: 520px;
-    margin: 25px auto;
-    text-align: center;
-    background: #fff;
-    border: 1px solid #ded5cf;
+    margin-bottom: 30px;
+
+    border: 1px solid #d8c9b8;
     border-radius: 16px;
-    padding: 24px;
-    box-shadow: 0 8px 25px rgba(40, 30, 40, .09);
+
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.06);
 }
 
-.profile-card img {
-    width: 150px;
-    height: 150px;
-    object-fit: cover;
-    border-radius: 50%;
-    max-width: 100%;
-    border: 5px solid #d9a441;
+.hero > p {
+    max-width: 750px;
+}
+
+
+/* =========================
+   MANGA CATALOG
+   ========================= */
+
+.catalog {
+    margin-top: 25px;
+
+    text-align: center;
+}
+
+.manga-card {
+    display: inline-block;
+
+    vertical-align: top;
+
+    width: 30%;
+
+    min-width: 250px;
+
+    margin: 1%;
+
+    padding: 20px;
+
+    background: #fffdf9;
+
+    border: 1px solid #d8c9b8;
+    border-radius: 14px;
+
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.07);
+
+    text-align: center;
+}
+
+.manga-card:hover {
+    box-shadow: 0 7px 18px rgba(0, 0, 0, 0.12);
+}
+
+.manga-card h3 {
+    margin-bottom: 5px;
 }
 
 .manga-cover {
     width: 100%;
-    max-width: 210px;
-    height: 280px;
+    max-width: 180px;
+
+    height: 240px;
+
     object-fit: cover;
-    border-radius: 10px;
-    border: 2px solid #d6c9be;
-}
 
-.catalog {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-}
+    border: 3px solid #8b5e83;
 
-.manga-card {
-    width: calc(33.333% - 14px);
-    min-width: 230px;
-    background: #fff;
-    padding: 18px;
-    border-radius: 14px;
-    border: 1px solid #ded5cf;
-    box-shadow: 0 6px 18px rgba(40,30,40,.06);
-}
-
-.manga-card img { display: block; margin: 0 auto 12px; }
-.manga-card h3 { margin-bottom: 5px; }
-
-.tag {
-    display: inline-block;
-    background: #eee5f2;
-    color: #382b40;
-    border-radius: 999px;
-    padding: 4px 9px;
-    margin: 3px 2px;
-    font-size: .85rem;
-}
-
-footer {
-    background: #241c29;
-    color: #d9cfe0;
-    text-align: center;
-    padding: 25px;
-    margin-top: 35px;
-}
-
-footer a { color: #f1c96e; }
-
-table {
-    width: 100%;
-    border-collapse: collapse;
-    background: #fff;
-    margin: 20px 0;
-}
-
-th, td {
-    border: 1px solid #cfc4bc;
-    padding: 12px;
-    text-align: center;
-}
-
-th { background: #382b40; color: #fff; }
-tr:nth-child(even) { background: #f3eee9; }
-.highlight-row { background: #f6e1a8 !important; font-weight: 700; }
-
-#table-title {
-    color: #382b40;
-    border-left: 6px solid #d9a441;
-    padding-left: 12px;
-}
-
-form {
-    width: 520px;
-    max-width: 100%;
-    margin: 25px auto;
-    background: #fff;
-    padding: 28px;
-    border-radius: 14px;
-    border: 1px solid #ded5cf;
-    box-shadow: 0 8px 22px rgba(40,30,40,.08);
-}
-
-label { display: block; font-weight: 700; margin: 13px 0 6px; }
-
-input, select, textarea {
-    width: 100%;
-    padding: 11px;
-    border: 1px solid #cfc4bc;
-    border-radius: 8px;
-    font: inherit;
-    background: #fffdfb;
-}
-
-textarea { min-height: 120px; resize: vertical; }
-
-button {
-    width: 100%;
-    margin-top: 18px;
-    border: 0;
-    background: #d9a441;
-    color: #241c29;
-    padding: 12px;
-    border-radius: 8px;
-    font-weight: 700;
-    cursor: pointer;
-    transition: .2s;
-}
-
-button:hover { background: #b98220; }
-
-.timeline li { margin-bottom: 10px; }
-
-.sitemap {
-    padding: 20px;
-    background: #fff;
-    border: 1px dashed #8d7c8e;
     border-radius: 12px;
 }
 
-.sitemap ul { line-height: 2; }
 
-.wireframe {
-    border: 2px dashed #8d7c8e;
-    background: #faf8f5;
-    padding: 18px;
-    margin: 18px 0;
+/* =========================
+   TAGS
+   ========================= */
+
+.tag {
+    display: inline-block;
+
+    margin: 4px;
+    padding: 4px 9px;
+
+    background: #eee4ef;
+    color: #5c3c5c;
+
+    border-radius: 20px;
+
+    font-size: 13px;
+    font-weight: 600;
+}
+
+
+/* =========================
+   BUTTON
+   ========================= */
+
+.btn {
+    display: inline-block;
+
+    padding: 9px 18px;
+
+    background: #70456f;
+    color: #ffffff;
+
+    border-radius: 8px;
+
+    font-weight: 600;
+}
+
+.btn:hover {
+    background: #39243f;
+    color: #ffffff;
+
+    text-decoration: none;
+}
+
+
+/* =========================
+   GENERAL CARD
+   ========================= */
+
+.card {
+    background: #ffffff;
+
+    margin: 25px 0;
+    padding: 25px;
+
+    border: 1px solid #d8c9b8;
+    border-radius: 14px;
+
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.06);
+}
+
+.card ul {
+    padding-left: 25px;
+}
+
+
+/* =========================
+   STUDENT PROFILE
+   ========================= */
+
+.profile-card {
+    max-width: 700px;
+
+    margin: 30px auto;
+    padding: 25px;
+
+    background: #ffffff;
+
+    border: 1px solid #d8c9b8;
+    border-radius: 16px;
+
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+}
+
+.profile-image {
+    width: 140px;
+    max-width: 100%;
+
+    border-radius: 50%;
+
+    border: 4px solid #8b5e83;
+
+    display: block;
+
+    margin: 0 auto 15px;
+}
+
+.profile-info {
+    text-align: center;
+}
+
+.profile-info h2 {
+    margin-bottom: 15px;
+}
+
+.profile-info p {
+    margin: 8px 0;
+}
+
+
+/* =========================
+   TABLE
+   ========================= */
+
+table {
+    width: 100%;
+
+    border-collapse: collapse;
+
+    margin: 25px 0;
+
+    background: #ffffff;
+}
+
+th {
+    background: #39243f;
+    color: #ffffff;
+
+    padding: 12px;
+
+    border: 1px solid #cdbda9;
+}
+
+td {
+    padding: 12px;
+
+    border: 1px solid #cdbda9;
+
+    text-align: center;
+}
+
+tr:nth-child(even) {
+    background: #f0e9f1;
+}
+
+.highlight-row {
+    background: #ead8b5 !important;
+
+    font-weight: 700;
+}
+
+#table-title {
+    text-align: center;
+
+    color: #39243f;
+}
+
+
+/* =========================
+   FORMS
+   ========================= */
+
+form {
+    width: 100%;
+    max-width: 600px;
+
+    margin: 30px auto;
+    padding: 30px;
+
+    background: #ffffff;
+
+    border: 1px solid #d8c9b8;
+
+    border-radius: 15px;
+
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.07);
+}
+
+label {
+    display: block;
+
+    margin-bottom: 6px;
+
+    font-weight: 700;
+
+    color: #39243f;
+}
+
+input,
+select,
+textarea {
+    width: 100%;
+
+    padding: 11px;
+
+    margin-bottom: 18px;
+
+    border: 1px solid #cdbda9;
+
+    border-radius: 8px;
+
+    font-family: 'Inter', Arial, sans-serif;
+
+    font-size: 15px;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    outline: none;
+
+    border-color: #8b5e83;
+}
+
+textarea {
+    min-height: 130px;
+
+    resize: vertical;
+}
+
+
+/* Radio buttons */
+
+.radio-group {
+    margin-bottom: 18px;
+}
+
+.radio-group label {
+    display: inline-block;
+
+    margin-right: 20px;
+
+    font-weight: 400;
+}
+
+.radio-group input {
+    width: auto;
+
+    margin-right: 6px;
+}
+
+
+/* Submit button */
+
+input[type="submit"] {
+    background: #70456f;
+    color: #ffffff;
+
+    border: none;
+
+    cursor: pointer;
+
+    font-weight: 700;
+
+    margin-bottom: 0;
+}
+
+input[type="submit"]:hover {
+    background: #39243f;
+}
+
+
+/* =========================
+   FLOAT LAYOUT
+   TASK 2
+   ========================= */
+
+.layout-wrapper {
+    overflow: auto;
+
+    margin: 30px 0;
+}
+
+.sidebar {
+    float: left;
+
+    width: 25%;
+
+    padding: 20px;
+
+    background: #eee4ef;
+
+    border: 1px solid #d8c9b8;
     border-radius: 10px;
 }
 
-.wire-box {
-    border: 2px solid #9e9197;
-    padding: 16px;
-    margin: 10px 0;
+.sidebar ul {
+    padding-left: 20px;
+}
+
+.main-content {
+    float: left;
+
+    width: 50%;
+
+    padding: 20px;
+
+    background: #ffffff;
+
+    border: 1px solid #d8c9b8;
+
+    margin-left: 2%;
+    margin-right: 2%;
+
+    border-radius: 10px;
+}
+
+.aside {
+    float: right;
+
+    width: 21%;
+
+    padding: 20px;
+
+    background: #f0e9f1;
+
+    border: 1px solid #d8c9b8;
+    border-radius: 10px;
+}
+
+.clearfix::after {
+    content: "";
+
+    display: table;
+
+    clear: both;
+}
+
+
+/* =========================
+   TRIBUTE PAGE
+   ========================= */
+
+.tribute-header {
     text-align: center;
-    background: #fff;
+
+    padding: 30px;
+
+    background: #39243f;
+
+    color: #ffffff;
+
+    border-radius: 14px;
+
+    margin-bottom: 25px;
 }
 
-.notice {
-    border-left: 5px solid #d9a441;
-    background: #fff7df;
-    padding: 14px 17px;
-    margin: 18px 0;
+.tribute-header h1 {
+    color: #ffffff;
 }
 
-@media (max-width: 760px) {
-    header h1 { font-size: 1.9rem; }
-    .hero h2 { font-size: 2rem; }
-    .manga-card { width: 100%; }
-    .navbar a { display: block; }
+.tribute-content {
+    background: #ffffff;
+
+    padding: 30px;
+
+    border: 1px solid #d8c9b8;
+
+    border-radius: 14px;
+
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.06);
 }
+
+.tribute-image {
+    display: block;
+
+    width: 100%;
+    max-width: 300px;
+
+    margin: 20px auto;
+
+    border-radius: 14px;
+
+    border: 4px solid #8b5e83;
+}
+
+.tribute-content li {
+    margin-bottom: 8px;
+}
+
+
+/* =========================
+   PROJECT / WIREFRAME
+   ========================= */
+
+.project-section {
+    background: #ffffff;
+
+    padding: 30px;
+
+    margin-bottom: 25px;
+
+    border: 1px solid #d8c9b8;
+
+    border-radius: 14px;
+
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.06);
+}
+
+.sitemap {
+    background: #f0e9f1;
+
+    padding: 20px;
+
+    border-left: 5px solid #70456f;
+
+    border-radius: 8px;
+}
+
+.wireframe {
+    width: 100%;
+
+    padding: 25px;
+
+    background: #faf7f2;
+
+    border: 2px dashed #8b5e83;
+
+    border-radius: 10px;
+
+    text-align: center;
+}
+
+
+/* =========================
+   FOOTER
+   ========================= */
+
+footer {
+    margin-top: 50px;
+
+    padding: 30px 20px;
+
+    background: #39243f;
+
+    color: #eadfea;
+
+    text-align: center;
+
+    border-top: 5px solid #b8955a;
+}
+
+footer p {
+    margin: 6px 0;
+}
+
+footer a {
+    color: #e5c77d;
+}
+
+footer a:hover {
+    color: #ffffff;
+}
+
+
+/* =========================
+   RESPONSIVE DESIGN
+   ========================= */
+
+@media (max-width: 800px) {
+
+    h1 {
+        font-size: 34px;
+    }
+
+    h2 {
+        font-size: 26px;
+    }
+
+    .container {
+        width: 94%;
+    }
+
+    .navbar a {
+        margin: 3px;
+    }
+
+    .manga-card {
+        width: 45%;
+    }
+
+    .sidebar,
+    .main-content,
+    .aside {
+        float: none;
+
+        width: 100%;
+
+        margin: 15px 0;
+    }
+}
+
+
+@media (max-width: 550px) {
+
+    h1 {
+        font-size: 30px;
+    }
+
+    .hero,
+    .card,
+    .profile-card,
+    .tribute-content,
+    .project-section {
+        padding: 20px;
+    }
+
+    .manga-card {
+        width: 100%;
+
+        margin: 10px 0;
+    }
+
+    .navbar {
+        padding: 10px;
+    }
+
+    .navbar a {
+        display: block;
+
+        margin: 4px 0;
+    }
+
+    table {
+        font-size: 14px;
+    }
+
+    th,
+    td {
+        padding: 8px;
+    }
+    }
