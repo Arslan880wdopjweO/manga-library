@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="500" height="500">
+<rect width="500" height="500" fill="#eee5f2"/>
+<circle cx="250" cy="190" r="105" fill="#d9a441"/>
+<path d="M120 470 Q140 300 250 300 Q360 300 380 470" fill="#382b40"/>
+<path d="M145 180 Q170 70 250 85 Q340 65 365 180 Q320 135 250 150 Q190 130 145 180" fill="#241c29"/>
+<circle cx="215" cy="195" r="9" fill="#241c29"/><circle cx="285" cy="195" r="9" fill="#241c29"/>
+<path d="M215 245 Q250 270 285 245" fill="none" stroke="#241c29" stroke-width="8"/>
+<text x="250" y="455" text-anchor="middle" font-family="Arial" font-size="22" fill="white">MANGA LIBRARY</text>
+</svg>

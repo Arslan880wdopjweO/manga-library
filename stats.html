@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MangaShelf — оценки</title><link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header><h1>Оценки читателей</h1><p>Task 4 — CSS Table</p></header>
+
+<div class="navbar">
+  <a href="index.html">Главная</a>
+  <a href="catalog.html">Каталог</a>
+  <a href="tribute.html">Автор</a>
+  <a href="stats.html">Таблица</a>
+  <a href="feedback.html">Отзывы</a>
+</div>
+
+<main class="container">
+<h2 id="table-title">Таблица оценок манги</h2>
+<p>Демонстрационная таблица содержит 3+ столбца, чередование строк через <code>nth-child</code>, выделенную строку через класс и объединённую ячейку через colspan.</p>
+<table>
+<thead><tr><th>Название</th><th>Жанр</th><th>Оценка</th><th>Статус</th></tr></thead>
+<tbody>
+<tr><td>Moon Kingdom</td><td>Fantasy</td><td>9.1/10</td><td>Онгоинг</td></tr>
+<tr class="highlight-row"><td>Tokyo Letters</td><td>Drama</td><td>9.4/10</td><td>Завершено</td></tr>
+<tr><td>Nova Circuit</td><td>Sci-Fi</td><td>8.8/10</td><td>Онгоинг</td></tr>
+<tr><td colspan="2"><strong>Средняя оценка</strong></td><td colspan="2"><strong>9.1/10</strong></td></tr>
+</tbody>
+</table>
+<div class="notice">Выделенная строка показывает использование CSS-класса <strong>.highlight-row</strong>, а последняя строка демонстрирует <strong>colspan</strong>.</div>
+<a class="btn" href="feedback.html">Оставить отзыв</a>
+</main>
+
+<footer>
+  <p>© 2026 MangaShelf — учебный проект по HTML & CSS.</p>
+  <p><a href="mailto:mangashelf@example.com">mangashelf@example.com</a> · Все страницы связаны общей навигацией.</p>
+</footer>
+
+</body></html>

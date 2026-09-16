@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MangaShelf — отзыв</title><link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header><h1>Обратная связь</h1><p>Task 4 — CSS Form</p></header>
+
+<div class="navbar">
+  <a href="index.html">Главная</a>
+  <a href="catalog.html">Каталог</a>
+  <a href="tribute.html">Автор</a>
+  <a href="stats.html">Таблица</a>
+  <a href="feedback.html">Отзывы</a>
+</div>
+
+<main class="container">
+<div class="card">
+<h2 style="text-align:center;">Расскажите о библиотеке</h2>
+<p style="text-align:center;">Заполните форму ниже. Это демонстрационная форма: данные никуда не отправляются.</p>
+<form action="#" method="post">
+<label for="name">Имя</label>
+<input id="name" name="name" type="text" placeholder="Ваше имя" required>
+
+<label for="email">Email</label>
+<input id="email" name="email" type="email" placeholder="you@example.com" required>
+
+<label for="role">Кто вы?</label>
+<select id="role" name="role">
+<option>Student</option><option>Teacher</option><option>Other</option>
+</select>
+
+<label>Порекомендуете MangaShelf?</label>
+<div>
+<label style="display:inline;font-weight:500;margin-right:18px;"><input type="radio" name="recommend" value="yes"> Да</label>
+<label style="display:inline;font-weight:500;"><input type="radio" name="recommend" value="no"> Нет</label>
+</div>
+
+<label for="comments">Комментарий</label>
+<textarea id="comments" name="comments" placeholder="Напишите отзыв..."></textarea>
+
+<button type="submit">Отправить отзыв</button>
+</form>
+</div>
+</main>
+
+<footer>
+  <p>© 2026 MangaShelf — учебный проект по HTML & CSS.</p>
+  <p><a href="mailto:mangashelf@example.com">mangashelf@example.com</a> · Все страницы связаны общей навигацией.</p>
+</footer>
+
+</body></html>

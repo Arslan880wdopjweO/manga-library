@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MangaShelf — каталог</title><link rel="stylesheet" href="styles.css">
+<style>
+.layout-header { background:#eee5f2; color:#382b40; padding:22px; border:1px solid #ded5cf; border-radius:12px; }
+.sidebar { float:left; width:25%; background:#382b40; color:white; padding:20px; min-height:430px; border-radius:12px; box-shadow:0 6px 18px rgba(40,30,40,.12); }
+.sidebar a { color:white; text-decoration:none; display:block; padding:10px; margin:5px 0; border-radius:6px; }
+.sidebar a:hover { background:#d9a441; color:#241c29; }
+.main-aside { float:right; width:71%; background:white; padding:22px; min-height:430px; border:1px solid #ded5cf; border-radius:12px; box-shadow:0 6px 18px rgba(40,30,40,.07); }
+.clearfix::after { content:""; display:table; clear:both; }
+@media(max-width:760px) { .sidebar,.main-aside { float:none; width:100%; margin-bottom:18px; } }
+</style>
+</head>
+<body>
+<header><h1>MangaShelf: каталог</h1><p>Task 2 — layout на div + positioning/float</p></header>
+
+<div class="navbar">
+  <a href="index.html">Главная</a>
+  <a href="catalog.html">Каталог</a>
+  <a href="tribute.html">Автор</a>
+  <a href="stats.html">Таблица</a>
+  <a href="feedback.html">Отзывы</a>
+</div>
+
+<main class="container">
+<div class="layout-header"><h2>Каталог манги</h2><p>На этой странице боковое меню находится слева, а основной контент — справа. Для двухколоночной структуры использованы CSS float, а не Flexbox или Grid.</p></div>
+<div class="clearfix" style="margin-top:20px;">
+<aside class="sidebar">
+<h3 style="color:white;">Жанры</h3>
+<a href="#fantasy">Фэнтези</a><a href="#drama">Драма</a><a href="#scifi">Sci-Fi</a><a href="#adventure">Приключения</a>
+</aside>
+<section class="main-aside">
+<h2>Популярные полки</h2>
+<p>Выберите жанр в меню слева. Ниже представлены демонстрационные карточки произведений.</p>
+<div class="card" id="fantasy"><h3>Moon Kingdom</h3><p>Фэнтези · 12 томов</p><span class="tag">Fantasy</span><span class="tag">Adventure</span></div>
+<div class="card" id="drama"><h3>Tokyo Letters</h3><p>Драма · 8 томов</p><span class="tag">Drama</span><span class="tag">Slice of Life</span></div>
+<div class="card" id="scifi"><h3>Nova Circuit</h3><p>Научная фантастика · 10 томов</p><span class="tag">Sci-Fi</span><span class="tag">Action</span></div>
+</section>
+</div>
+</main>
+
+<footer>
+  <p>© 2026 MangaShelf — учебный проект по HTML & CSS.</p>
+  <p><a href="mailto:mangashelf@example.com">mangashelf@example.com</a> · Все страницы связаны общей навигацией.</p>
+</footer>
+
+</body></html>
