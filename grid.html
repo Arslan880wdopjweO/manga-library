@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MangaShelf — Grid Layout</title><link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header><h1>MangaShelf</h1><p>Assignment #2 · Task 2 — CSS Grid layout</p></header>
+
+<div class="navbar">
+  <a href="index.html" class="logo">📖 MangaShelf</a>
+  <div class="nav-links">
+    <a href="index.html">Главная</a>
+    <a href="catalog.html">Каталог</a>
+    <a href="tribute.html">Автор</a>
+    <a href="stats.html">Таблица</a>
+    <a href="feedback.html">Отзывы</a>
+    <a href="grid.html">Grid Layout</a>
+    <a href="gallery.html">Галерея</a>
+    <a href="portfolio.html">Портфолио</a>
+  </div>
+</div>
+
+<main class="container">
+<div class="card">
+<h2>Grid Layout — новые поступления</h2>
+<p>Эта страница построена с помощью <strong>CSS Grid</strong> и <code>grid-template-areas</code>: шапка растягивается на всю ширину сверху, слева расположено боковое меню, справа — основной контент, а подвал занимает всю ширину снизу.</p>
+</div>
+
+<!-- TASK 2: header / sidebar / main / footer with CSS Grid -->
+<div class="grid-page">
+
+  <div class="g-header">
+    <h2>Новые главы на этой неделе</h2>
+  </div>
+
+  <aside class="g-sidebar">
+    <h3 style="color:#fff;">Быстрые ссылки</h3>
+    <a href="catalog.html">Каталог</a>
+    <a href="tribute.html">Автор</a>
+    <a href="stats.html">Таблица оценок</a>
+    <a href="feedback.html">Оставить отзыв</a>
+  </aside>
+
+  <section class="g-main">
+    <h3>Что почитать на этой неделе</h3>
+    <p>Подборка глав, вышедших за последнюю неделю в библиотеке MangaShelf. Область главного контента размещена справа от бокового меню при помощи <code>grid-template-areas</code>, а не float или Flexbox.</p>
+    <ul>
+      <li>Moon Kingdom — глава 45: "Затмение"</li>
+      <li>Tokyo Letters — глава 22: "Письмо, которое не отправили"</li>
+      <li>Nova Circuit — глава 18: "Перезагрузка"</li>
+    </ul>
+    <a class="btn" href="catalog.html">Открыть каталог</a>
+  </section>
+
+  <div class="g-footer">
+    <p>MangaShelf · раздел построен на CSS Grid</p>
+  </div>
+
+</div>
+</main>
+
+<footer>
+  <p>© 2026 MangaShelf — учебный проект по HTML & CSS.</p>
+  <p><a href="mailto:mangashelf@example.com">mangashelf@example.com</a> · Все страницы связаны общей навигацией.</p>
+</footer>
+
+</body></html>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MangaShelf — Галерея</title><link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header><h1>MangaShelf</h1><p>Assignment #2 · Task 3 — CSS Grid gallery</p></header>
+
+<div class="navbar">
+  <a href="index.html" class="logo">📖 MangaShelf</a>
+  <div class="nav-links">
+    <a href="index.html">Главная</a>
+    <a href="catalog.html">Каталог</a>
+    <a href="tribute.html">Автор</a>
+    <a href="stats.html">Таблица</a>
+    <a href="feedback.html">Отзывы</a>
+    <a href="grid.html">Grid Layout</a>
+    <a href="gallery.html">Галерея</a>
+    <a href="portfolio.html">Портфолио</a>
+  </div>
+</div>
+
+<main class="container">
+<div class="card">
+<h2>Галерея обложек</h2>
+<p>Девять обложек манги, выложенные сеткой <strong>CSS Grid</strong> (<code>display: grid</code>, одинаковые колонки и ряды, общий <code>gap</code>). Наведите курсор на обложку, чтобы увидеть название и жанр.</p>
+</div>
+
+<!-- TASK 3: image gallery with CSS Grid + hover caption overlay -->
+<div class="gallery-grid">
+
+  <div class="gallery-item">
+    <img src="cover-one.svg" alt="Обложка манги Moon Kingdom">
+    <div class="gallery-caption">Moon Kingdom<br>Fantasy · 12 томов</div>
+  </div>
+
+  <div class="gallery-item">
+    <img src="cover-two.svg" alt="Обложка манги Tokyo Letters">
+    <div class="gallery-caption">Tokyo Letters<br>Drama · 8 томов</div>
+  </div>
+
+  <div class="gallery-item">
+    <img src="cover-three.svg" alt="Обложка манги Nova Circuit">
+    <div class="gallery-caption">Nova Circuit<br>Sci-Fi · 10 томов</div>
+  </div>
+
+  <div class="gallery-item">
+    <img src="cover-four.svg" alt="Обложка манги Silver Ronin">
+    <div class="gallery-caption">Silver Ronin<br>Action · 6 томов</div>
+  </div>
+
+  <div class="gallery-item">
+    <img src="cover-five.svg" alt="Обложка манги Paper Moon">
+    <div class="gallery-caption">Paper Moon<br>Romance · 5 томов</div>
+  </div>
+
+  <div class="gallery-item">
+    <img src="cover-six.svg" alt="Обложка манги Crimson Ink">
+    <div class="gallery-caption">Crimson Ink<br>Horror · 7 томов</div>
+  </div>
+
+  <div class="gallery-item">
+    <img src="cover-seven.svg" alt="Обложка манги Ghost Circuit">
+    <div class="gallery-caption">Ghost Circuit<br>Sci-Fi · 9 томов</div>
+  </div>
+
+  <div class="gallery-item">
+    <img src="cover-eight.svg" alt="Обложка манги Iron Blossom">
+    <div class="gallery-caption">Iron Blossom<br>Drama · 11 томов</div>
+  </div>
+
+  <div class="gallery-item">
+    <img src="cover-nine.svg" alt="Обложка манги Neon Temple">
+    <div class="gallery-caption">Neon Temple<br>Fantasy · 14 томов</div>
+  </div>
+
+</div>
+</main>
+
+<footer>
+  <p>© 2026 MangaShelf — учебный проект по HTML & CSS.</p>
+  <p><a href="mailto:mangashelf@example.com">mangashelf@example.com</a> · Все страницы связаны общей навигацией.</p>
+</footer>
+
+</body></html>

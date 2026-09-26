@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MangaShelf — Портфолио</title><link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header><h1>MangaShelf</h1><p>Assignment #2 · Task 4 — Portfolio (Flexbox + Grid)</p></header>
+
+<!-- TASK 4.2: header navigation uses Flexbox (same .navbar as every page) -->
+<div class="navbar">
+  <a href="index.html" class="logo">📖 MangaShelf</a>
+  <div class="nav-links">
+    <a href="index.html">Главная</a>
+    <a href="catalog.html">Каталог</a>
+    <a href="tribute.html">Автор</a>
+    <a href="stats.html">Таблица</a>
+    <a href="feedback.html">Отзывы</a>
+    <a href="grid.html">Grid Layout</a>
+    <a href="gallery.html">Галерея</a>
+    <a href="portfolio.html">Портфолио</a>
+  </div>
+</div>
+
+<main class="container">
+<div class="card">
+<h2>Портфолио студента — MangaShelf</h2>
+<p><strong>Студент:</strong> Arslan Maratbekov · <strong>Группа:</strong> SE-2524</p>
+<p>Эта страница показывает выполненные задания проекта MangaShelf. Слева — карточки заданий (Flexbox внутри каждой карточки), справа — краткая информация об авторе (CSS Grid делит страницу на две колонки).</p>
+</div>
+
+<!-- TASK 4.3: main section uses CSS Grid (projects left, info right) -->
+<div class="portfolio-layout">
+
+  <section class="portfolio-projects">
+
+    <!-- TASK 4.4: each project card arranges title/description/button with Flexbox -->
+    <div class="project-card">
+      <h3>Task 1–4: HTML &amp; CSS Basics</h3>
+      <p>Личная страница, профиль, списки, изображения и ссылки — базовая структура сайта MangaShelf.</p>
+      <a class="btn" href="index.html">Открыть страницу</a>
+    </div>
+
+    <div class="project-card">
+      <h3>Task 2: Layout на Float</h3>
+      <p>Страница каталога с боковым меню и основным контентом, построенная на <code>float</code>, плюс ряд карточек манги на Flexbox.</p>
+      <a class="btn" href="catalog.html">Открыть каталог</a>
+    </div>
+
+    <div class="project-card">
+      <h3>Assignment #2 · Grid Layout</h3>
+      <p>Страница с шапкой, боковым меню, контентом и подвалом, построенная через <code>grid-template-areas</code>.</p>
+      <a class="btn" href="grid.html">Открыть Grid Layout</a>
+    </div>
+
+    <div class="project-card">
+      <h3>Assignment #2 · Image Gallery</h3>
+      <p>Галерея из 9 обложек манги на CSS Grid с всплывающей подписью при наведении.</p>
+      <a class="btn" href="gallery.html">Открыть галерею</a>
+    </div>
+
+  </section>
+
+  <aside class="portfolio-info">
+    <h3>Об авторе</h3>
+    <p>Студент, изучающий основы фронтенд-разработки: HTML, CSS, Flexbox и CSS Grid.</p>
+    <h3>Технологии</h3>
+    <ul>
+      <li>HTML5</li>
+      <li>CSS3</li>
+      <li>Flexbox</li>
+      <li>CSS Grid</li>
+    </ul>
+    <a class="btn" href="feedback.html">Оставить отзыв</a>
+  </aside>
+
+</div>
+</main>
+
+<footer>
+  <p>© 2026 MangaShelf — учебный проект по HTML & CSS.</p>
+  <p><a href="mailto:mangashelf@example.com">mangashelf@example.com</a> · Все страницы связаны общей навигацией.</p>
+</footer>
+
+</body></html>
