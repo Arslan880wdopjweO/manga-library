@@ -1,4 +1,4 @@
-[README.md](https://github.com/user-attachments/files/32686464/README.md)
+[README.md](https://github.com/user-attachments/files/32686868/README.md)
 # MangaShelf
 
 Учебный сайт-библиотека манги. Проект сдавался в два этапа:
