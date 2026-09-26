@@ -28,16 +28,19 @@ header h1 {
 
 header p { margin: 0; color: #d9cfe0; }
 
-/* Task 0: Navbar built with Flexbox — logo on the left, links on the right,
-   both vertically centered on the same row. */
+/* ===== TASK 0: Flexbox navbar =====
+   The navbar container is a flex row: the logo sits on the left,
+   the links sit on the right, and everything is vertically
+   centered with align-items: center. flex-wrap lets the links
+   drop to a second line on small screens instead of overflowing. */
 .navbar {
     background: #382b40;
     padding: 12px 5%;
     border-bottom: 3px solid #d9a441;
-    display: flex;              /* flex container */
+    display: flex;
     flex-direction: row;
-    justify-content: space-between; /* logo left, links right */
-    align-items: center;        /* vertical centering */
+    justify-content: space-between;
+    align-items: center;
     flex-wrap: wrap;
     gap: 10px;
 }
@@ -46,12 +49,13 @@ header p { margin: 0; color: #d9cfe0; }
     color: #f1c96e;
     font-family: 'Playfair Display', serif;
     font-weight: 700;
-    font-size: 1.3rem;
-    letter-spacing: .5px;
+    font-size: 1.15rem;
+    text-decoration: none;
+    padding: 6px 8px;
 }
 
 .nav-links {
-    display: flex;              /* nested flex container for the links */
+    display: flex;
     flex-wrap: wrap;
     align-items: center;
     gap: 4px;
@@ -68,11 +72,6 @@ header p { margin: 0; color: #d9cfe0; }
 }
 
 .navbar a:hover { background: #d9a441; color: #241c29; }
-
-@media (max-width: 550px) {
-    .navbar { flex-direction: column; align-items: flex-start; }
-    .nav-links { width: 100%; justify-content: center; }
-}
 
 .container {
     max-width: 1100px;
@@ -149,40 +148,44 @@ h3 { font-size: 1.35rem; }
     border: 2px solid #d6c9be;
 }
 
-/* Task 1: Card row — flex container, cards wrap on small screens,
-   items stretch to equal height by default (align-items: stretch). */
+/* ===== TASK 1: Card row with Flexbox =====
+   .catalog is the flex container (display:flex, wraps, fixed gap).
+   Each .manga-card is ALSO a flex column, so its own title/text/tag/
+   button stack vertically and the button can be pushed to the
+   bottom with margin-top:auto, keeping every card the same height. */
 .catalog {
     display: flex;
-    flex-direction: row;
     flex-wrap: wrap;
-    justify-content: center;
-    align-items: stretch;   /* equal-height cards */
+    align-items: stretch;   /* makes every card the same height */
     gap: 20px;
 }
 
 .manga-card {
     display: flex;
-    flex-direction: column;  /* image -> title -> text -> button, stacked */
-    flex: 1 1 230px;         /* grow / shrink / basis */
+    flex-direction: column;
+    width: calc(33.333% - 14px);
     min-width: 230px;
-    max-width: 260px;
     background: #fff;
     padding: 18px;
     border-radius: 14px;
     border: 1px solid #ded5cf;
     box-shadow: 0 6px 18px rgba(40,30,40,.06);
-    transition: transform .25s, box-shadow .25s;
+    transition: transform .2s, box-shadow .2s;   /* hover effect */
 }
 
 .manga-card:hover {
     transform: translateY(-6px);
-    box-shadow: 0 16px 30px rgba(40,30,40,.18);
+    box-shadow: 0 14px 30px rgba(40,30,40,.18);
 }
 
 .manga-card img { display: block; margin: 0 auto 12px; }
 .manga-card h3 { margin-bottom: 5px; }
-.manga-card p { flex: 1; }         /* text fills remaining space */
-.manga-card .btn { margin-top: 14px; text-align: center; }
+
+.manga-card .btn {
+    margin-top: auto;     /* pushes the button to the bottom of the card */
+    text-align: center;
+    align-self: flex-start;
+}
 
 .tag {
     display: inline-block;
@@ -300,111 +303,127 @@ button:hover { background: #b98220; }
     margin: 18px 0;
 }
 
-/* ===================== Task 2: Grid page layout ===================== */
-/* Whole page (header / sidebar / main / footer) laid out with
-   grid-template-areas: header spans the top, footer spans the bottom,
-   sidebar sits left of main. */
-.page-grid {
+/* =========================================================
+   TASK 2: Grid Layout page (grid.html)
+   .grid-page is the grid container. grid-template-areas names
+   4 zones so the CSS reads almost like a picture of the layout.
+   ========================================================= */
+.grid-page {
     display: grid;
-    grid-template-columns: 230px 1fr;
-    grid-template-rows: auto 1fr auto;
+    grid-template-columns: 220px 1fr;
+    grid-template-rows: auto auto auto;
     grid-template-areas:
         "header header"
         "sidebar main"
         "footer footer";
-    min-height: 100vh;
+    gap: 18px;
+    margin: 20px 0;
 }
 
-.grid-header { grid-area: header; }
-.grid-footer { grid-area: footer; }
+.g-header {
+    grid-area: header;
+    background: #eee5f2;
+    color: #382b40;
+    padding: 20px 24px;
+    border: 1px solid #ded5cf;
+    border-radius: 12px;
+}
 
-.grid-sidebar {
+.g-sidebar {
     grid-area: sidebar;
     background: #382b40;
     color: #fff;
-    padding: 26px 20px;
+    padding: 20px;
+    border-radius: 12px;
+    display: flex;            /* links stacked vertically, evenly spaced */
+    flex-direction: column;
+    gap: 8px;
 }
-.grid-sidebar h3 { color: #f1c96e; }
-.grid-sidebar a {
+
+.g-sidebar a {
     color: #fff;
     text-decoration: none;
-    display: block;
-    padding: 9px 4px;
-    border-bottom: 1px solid rgba(255,255,255,.12);
+    padding: 8px 10px;
+    border-radius: 6px;
 }
-.grid-sidebar a:hover { color: #d9a441; }
 
-.grid-main {
+.g-sidebar a:hover { background: #d9a441; color: #241c29; }
+
+.g-main {
     grid-area: main;
-    padding: 30px 5%;
+    background: #fff;
+    padding: 22px;
+    border: 1px solid #ded5cf;
+    border-radius: 12px;
+    box-shadow: 0 6px 18px rgba(40,30,40,.07);
 }
 
-@media (max-width: 760px) {
-    .page-grid {
-        grid-template-columns: 1fr;
-        grid-template-areas:
-            "header"
-            "sidebar"
-            "main"
-            "footer";
-    }
+.g-footer {
+    grid-area: footer;
+    background: #241c29;
+    color: #d9cfe0;
+    text-align: center;
+    padding: 14px;
+    border-radius: 12px;
 }
 
-/* ===================== Task 3: Image gallery grid ===================== */
+/* =========================================================
+   TASK 3: Image gallery (gallery.html)
+   .gallery-grid is display:grid with equal columns/rows and a
+   consistent gap. Each .gallery-item reveals a caption on hover.
+   ========================================================= */
 .gallery-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* 3 equal columns */
-    grid-auto-rows: 1fr;
-    gap: 18px;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+    margin: 20px 0;
 }
 
 .gallery-item {
     position: relative;
-    overflow: hidden;
     border-radius: 12px;
+    overflow: hidden;
     border: 1px solid #ded5cf;
-    box-shadow: 0 6px 16px rgba(40,30,40,.08);
+    aspect-ratio: 3 / 4;
 }
 
 .gallery-item img {
     display: block;
     width: 100%;
-    height: 230px;
+    height: 100%;
     object-fit: cover;
-    transition: transform .3s;
 }
 
 .gallery-caption {
     position: absolute;
-    inset: 0;
-    background: rgba(36,28,41,.78);
+    left: 0; right: 0; bottom: 0;
+    background: rgba(36, 28, 41, .85);
     color: #fff;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     text-align: center;
-    padding: 12px;
+    padding: 10px;
+    font-size: .9rem;
+    line-height: 1.4;
     opacity: 0;
-    transition: opacity .3s;
-    font-weight: 600;
+    transform: translateY(100%);
+    transition: opacity .25s, transform .25s;   /* hover effect */
 }
 
-.gallery-item:hover .gallery-caption { opacity: 1; }
-.gallery-item:hover img { transform: scale(1.08); }
-
-@media (max-width: 800px) {
-    .gallery-grid { grid-template-columns: repeat(2, 1fr); }
-}
-@media (max-width: 550px) {
-    .gallery-grid { grid-template-columns: 1fr; }
+.gallery-item:hover .gallery-caption {
+    opacity: 1;
+    transform: translateY(0);
 }
 
-/* ===================== Task 4: Portfolio (Grid + Flexbox) ===================== */
+/* =========================================================
+   TASK 4: Portfolio page (portfolio.html)
+   .portfolio-layout is CSS Grid (projects left, info right).
+   .portfolio-projects and each .project-card use Flexbox.
+   ========================================================= */
 .portfolio-layout {
     display: grid;
-    grid-template-columns: 2fr 1fr; /* projects left, info right */
-    gap: 26px;
+    grid-template-columns: 2fr 1fr;
+    gap: 22px;
     align-items: start;
+    margin: 20px 0;
 }
 
 .portfolio-projects {
@@ -421,32 +440,64 @@ button:hover { background: #b98220; }
     border-radius: 14px;
     padding: 20px;
     box-shadow: 0 6px 18px rgba(40,30,40,.06);
-    transition: transform .25s, box-shadow .25s;
 }
-.project-card:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 14px 26px rgba(40,30,40,.14);
-}
-.project-card p { flex: 1; }
-.project-card .btn { margin-top: 14px; align-self: flex-start; }
 
-.portfolio-sidebar {
-    background: #eee5f2;
+.project-card .btn {
+    margin-top: auto;   /* keeps every button aligned at the bottom */
+    align-self: flex-start;
+}
+
+.portfolio-info {
+    background: #fff;
     border: 1px solid #ded5cf;
     border-radius: 14px;
-    padding: 22px;
+    padding: 20px;
+    box-shadow: 0 6px 18px rgba(40,30,40,.06);
 }
-.portfolio-sidebar ul { padding-left: 20px; }
+
+.portfolio-info ul { padding-left: 20px; }
+.portfolio-info .btn { margin-top: 10px; }
+
+/* =========================================================
+   RESPONSIVE DESIGN
+   ========================================================= */
 
 @media (max-width: 800px) {
-    .portfolio-layout { grid-template-columns: 1fr; }
-}
-
-@media (max-width: 760px) {
     header h1 { font-size: 1.9rem; }
     .hero h2 { font-size: 2rem; }
-    .navbar a { display: block; }
+
+    /* Flexbox cards: 2 per row instead of 3 */
+    .manga-card { width: calc(50% - 10px); }
+
+    /* Grid page: sidebar goes above the main content, 1 column */
+    .grid-page {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "header"
+            "sidebar"
+            "main"
+            "footer";
+    }
+
+    /* Gallery: 2 columns instead of 3 */
+    .gallery-grid { grid-template-columns: repeat(2, 1fr); }
+
+    /* Portfolio: info column moves below the projects, 1 column */
+    .portfolio-layout { grid-template-columns: 1fr; }
+
+    .sidebar, .main-aside { float: none; width: 100%; margin-bottom: 18px; }
 }
+
 @media (max-width: 550px) {
-    .gallery-item img { height: 190px; }
+    .navbar { justify-content: center; text-align: center; }
+    .nav-links { justify-content: center; }
+    .navbar a { display: block; }
+
+    /* Flexbox cards: 1 per row on small phones */
+    .manga-card { width: 100%; }
+
+    /* Gallery: 1 column on small phones */
+    .gallery-grid { grid-template-columns: 1fr; }
+
+    form { width: 100%; }
 }
